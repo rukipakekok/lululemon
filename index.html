@@ -1,1 +1,109 @@
-<p> test</p>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Datangh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f172a;
+      --card: rgba(255,255,255,0.06);
+      --accent: #7c3aed;
+      --text: #e6eef8;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #071028 0%, #0b1220 60%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .card{
+      width:100%;
+      max-width:920px;
+      background:var(--card);
+      border-radius:18px;
+      padding:40px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      display:flex;
+      align-items:center;
+      gap:36px;
+      backdrop-filter: blur(6px);
+    }
+    .left{
+      flex:1 1 320px;
+      text-align:center;
+    }
+    .hero-img{
+      width:320px;
+      max-width:48vw;
+      height:auto;
+      border-radius:12px;
+      display:block;
+      margin:0 auto 18px auto;
+      box-shadow: 0 8px 30px rgba(12,15,30,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size: clamp(28px, 5vw, 48px);
+      letter-spacing: -0.02em;
+      font-weight:700;
+      color:var(--text);
+    }
+    p.lead{
+      margin:0;
+      color:rgba(230,238,248,0.85);
+      font-size: clamp(14px, 2.2vw, 18px);
+      opacity:0.95;
+    }
+    .right{
+      width:220px;
+      flex:0 0 220px;
+      text-align:center;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:12px;
+      background:linear-gradient(90deg,var(--accent), #5b21b6);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.28);
+    }
+    small{display:block;margin-top:12px;color:rgba(230,238,248,0.6)}
+
+    /* Responsive: stack on small screens */
+    @media (max-width:720px){
+      .card{flex-direction:column;padding:28px}
+      .right{width:100%;flex:1 1 auto}
+    }
+
+    /* Comment: Replace the image src with your own image URL */
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="hero-title">
+    <section class="left">
+      <!-- Replace the src below with your own image URL -->
+      <img class="hero-img" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1e3f7c0b6b5e9e8c5f8f3d7f2f6e7a6c" alt="Gambar Selamat Datang"/>
+      <h1 id="hero-title">Selamat Datangh</h1>
+      <p class="lead">Senang kamu datang — halaman sederhana ini bisa kamu pakai sebagai landing page awal.</p>
+    </section>
+
+    <aside class="right" aria-label="Aksi cepat">
+      <a class="btn" href="#">Mulai</a>
+      <small>Ganti gambar / teks sesuai kebutuhan.</small>
+    </aside>
+  </main>
+</body>
+</html>
